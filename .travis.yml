@@ -1,0 +1,13 @@
+dist: xenial
+language: bash
+services:
+    - docker
+before_install:
+  - echo $TRAVIS_BUILD_DIR
+  - docker run --rm hello-world
+before_script:
+  - docker-compose up -d database
+  - chmod +x ./wait-for-databases.sh
+script:
+  - ./wait-for-databases.sh
+  
