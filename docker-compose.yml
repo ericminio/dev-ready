@@ -14,8 +14,13 @@ services:
       
   tests:
     image: ericminio/node
+    container_name: tests
+    volumes:
+      - .:/tmp
+    command: /tmp/support/run-tests.sh
+
+  node:
+    image: ericminio/node
     container_name: node
     volumes:
       - .:/tmp
-    command: -c "/tmp/support/run-tests.sh"
-      

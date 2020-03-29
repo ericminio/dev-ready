@@ -4,12 +4,13 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "mocha *.spec.js --recursive"
+    "test": "mocha './{,!(node_modules)/**}/*.spec.js'"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "chai": "^4.2.0",
-    "mocha": "^7.1.1"
+    "mocha": "^7.1.1",
+    "yop-postgresql": "^1.3.0"
   }
 }
