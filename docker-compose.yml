@@ -12,7 +12,10 @@ services:
       - POSTGRES_USER=dev
       - POSTGRES_PASSWORD=dev
       
-  code:
+  tests:
     image: ericminio/node
-    container_node: node
-    
+    container_name: node
+    volumes:
+      - .:/tmp
+    command: -c "/tmp/support/run-tests.sh"
+      

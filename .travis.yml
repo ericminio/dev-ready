@@ -7,7 +7,7 @@ before_install:
   - docker run --rm hello-world
 before_script:
   - docker-compose up -d database
-  - chmod +x ./wait-for-databases.sh
-script:
-  - ./wait-for-databases.sh
+  - ./support/wait-for-databases.sh
+script:  
+  - docker-compose run --rm tests
   
