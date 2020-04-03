@@ -16,11 +16,11 @@ services:
     image: ericminio/node
     container_name: tests
     volumes:
-      - .:/tmp
-    command: /tmp/support/run-tests.sh
+      - .:/usr/local/src
+    command: /usr/local/src/support/run-tests.sh
 
   node:
     image: ericminio/node
     container_name: node
     volumes:
-      - .:/tmp
+      - .:/usr/local/src

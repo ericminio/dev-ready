@@ -3,7 +3,7 @@
 version=$(ls $NVM_DIR/versions/node)
 export PATH=$NVM_DIR/versions/node/$version/bin:$PATH;
 
-cd /tmp/app;
+cd /usr/local/src/app;
 ls -la;
 whoami;
 npm install;
