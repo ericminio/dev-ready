@@ -1,14 +1,14 @@
 const { expect } = require('chai')
 var { executeSync } = require('yop-postgresql')
 
-describe('mocha1', ()=>{
+describe('mocha', ()=>{
 
     it('is ready', ()=> {
         expect(1+2).to.equal(3)
     })
 })
 
-describe('postgresql1', ()=> {
+describe('postgresql', ()=> {
 
     beforeEach(()=>{
         process.env.PGUSER='dev';

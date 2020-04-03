@@ -19,8 +19,3 @@ services:
       - .:/tmp
     command: /tmp/support/run-tests.sh
 
-  node:
-    image: ericminio/node
-    container_name: node
-    volumes:
-      - .:/tmp
