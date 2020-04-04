@@ -13,7 +13,7 @@ services:
       - POSTGRES_PASSWORD=dev
       
   node:
-    image: ericminio/node
+    image: node:app
     container_name: node
     volumes:
       - ./app:/home/dev/app
