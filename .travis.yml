@@ -11,7 +11,5 @@ before_script:
   - ./support/wait-for-database.sh
   - docker build -t node:tests .
 script:  
-  - docker-compose run --rm tests -c "ls -la"
-  - docker-compose run --rm tests -c "env"
-  - docker-compose run --rm tests -c "cat ~/.bashrc"
+  - docker-compose run --rm install
   

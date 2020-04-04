@@ -1,4 +1,4 @@
-version: '3.4'
+version: '3.7'
 
 services:
 
@@ -21,3 +21,12 @@ services:
     container_name: node
     volumes:
       - ./app:/home/dev/app
+
+  install:
+    image: ericminio/node
+    container_name: install
+    user: dev
+    working_dir: /home/dev/app
+    volumes:
+      - ./app:/home/dev/app
+    command: "npm install"
