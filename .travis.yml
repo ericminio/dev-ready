@@ -9,5 +9,5 @@ before_script:
   - docker-compose up -d database
   - ./support/wait-for-database.sh
 script:  
-  - docker-compose run --rm tests
+  - docker-compose run --rm -w /usr/local/src node -c "./support/run-tests.sh"
   
