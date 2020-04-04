@@ -12,8 +12,12 @@ services:
       - POSTGRES_USER=dev
       - POSTGRES_PASSWORD=dev
       
+  tests:
+    image: node:tests
+    container_name: tests
+
   node:
-    image: node:app
+    image: ericminio/node
     container_name: node
     volumes:
       - ./app:/home/dev/app
