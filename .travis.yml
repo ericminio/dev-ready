@@ -10,6 +10,8 @@ before_script:
   - ./support/wait-for-database.sh
 script:  
   - docker-compose run --rm -w /home/dev node -c "ls -la"
+  - docker-compose run --rm -w /home/dev node -c "chown -R dev:dev /home/dev/app"
+  - docker-compose run --rm -w /home/dev node -c "ls -la"
   - docker-compose run --rm -w /home/dev/app node -c "ls -la"
   - docker-compose run --rm -w /home/dev/app node -c "npm install"
   
