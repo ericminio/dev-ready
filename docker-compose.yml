@@ -16,4 +16,4 @@ services:
     image: ericminio/node
     container_name: node
     volumes:
-      - ./app:/usr/local/src/app
+      - ./app:/home/dev/app

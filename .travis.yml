@@ -9,7 +9,7 @@ before_script:
   - docker-compose up -d database
   - ./support/wait-for-database.sh
 script:  
-  - docker-compose run --rm -w /usr/local/src node -c "ls -la"
-  - docker-compose run --rm -w /usr/local/src/app node -c "ls -la"
-  - docker-compose run --rm -w /usr/local/src/app node -c "npm install"
+  - docker-compose run --rm -w /home/dev node -c "ls -la"
+  - docker-compose run --rm -w /home/dev/app node -c "ls -la"
+  - docker-compose run --rm -w /home/dev/app node -c "npm install"
   
