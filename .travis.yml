@@ -10,7 +10,7 @@ before_script:
   - docker-compose up -d database
   - ./support/wait-for-database.sh
   - docker build -t node:tests .
-  - docker-compose run --rm tests -c "ls -la"
 script:  
-  - docker-compose run --rm tests -c "./support/run-tests.sh"
+  - docker-compose run --rm tests -c "ls -la"
+  - docker-compose run --rm tests -c "npm install"
   
