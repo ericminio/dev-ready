@@ -10,4 +10,4 @@ COPY ./support /home/dev/support
 RUN chown -R dev:dev /home/dev/support
 
 USER dev
-WORKDIR /home/dev/app
+WORKDIR /home/dev

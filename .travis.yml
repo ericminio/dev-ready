@@ -9,7 +9,6 @@ before_install:
 before_script:
   - docker-compose up -d database
   - ./support/wait-for-database.sh
-  - docker build -t node:tests .
 script:  
-  - docker-compose run --rm install
+  - docker-compose run --rm tests
   
