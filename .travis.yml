@@ -2,13 +2,8 @@ dist: xenial
 language: bash
 services:
     - docker
-before_install:
-  - echo $TRAVIS_BUILD_DIR
-  - docker -v
-  - docker run --rm hello-world
-before_script:
+script:  
   - docker-compose up -d database
   - ./support/wait-for-database.sh
-script:  
   - docker-compose run --rm tests
   
