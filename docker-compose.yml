@@ -12,7 +12,7 @@ services:
       - POSTGRES_USER=dev
       - POSTGRES_PASSWORD=dev
       
-  tests:
+  ci:
     build: 
       context: .
       dockerfile: ./support/Dockerfile
@@ -20,8 +20,9 @@ services:
     container_name: tests
     command: ./support/run-tests.sh
 
-  node:
+  dev:
     image: ericminio/node
     container_name: node
     volumes:
       - ./app:/home/dev/app
+    working_dir: /home/dev/app
