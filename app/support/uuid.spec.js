@@ -37,7 +37,8 @@ describe('uuid generator', ()=>{
 
             ids = []
             for(var i=0; i<10; i++) {
-                var rows = await executeSync('select gen_random_uuid() as uuid')
+                await executeSync('CREATE EXTENSION IF NOT EXISTS pgcrypto')
+                var rows = await executeSync('SELECT gen_random_uuid() AS uuid')
                 ids.push(rows[0].uuid)
             }         
         })
