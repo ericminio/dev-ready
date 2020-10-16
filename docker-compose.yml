@@ -29,6 +29,12 @@ services:
   dev:
     image: ericminio/node
     container_name: node
+    environment: 
+      - PGHOST=postgres
+      - PGPORT=5432
+      - PGDATABASE=data
+      - PGUSER=dev
+      - PGPASSWORD=dev
     volumes:
       - ./app:/home/dev/app
     working_dir: /home/dev/app
