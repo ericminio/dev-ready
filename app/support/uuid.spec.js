@@ -30,11 +30,6 @@ describe('uuid generator', ()=>{
         let ids
 
         beforeEach(async ()=>{
-            process.env.PGUSER='dev'
-            process.env.PGDATABASE='data'
-            process.env.PGHOST='postgres'
-            process.env.PGPASSWORD='dev'
-
             ids = []
             for(var i=0; i<10; i++) {
                 await executeSync('CREATE EXTENSION IF NOT EXISTS pgcrypto')

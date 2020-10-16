@@ -1,5 +1,5 @@
 const { expect } = require('chai')
-var { executeSync } = require('yop-postgresql')
+const { executeSync } = require('yop-postgresql')
 
 describe('mocha', ()=>{
 
@@ -9,13 +9,6 @@ describe('mocha', ()=>{
 })
 
 describe('postgresql', ()=> {
-
-    beforeEach(()=>{
-        process.env.PGUSER='dev';
-        process.env.PGDATABASE='data';
-        process.env.PGHOST='postgres';
-        process.env.PGPASSWORD='dev';
-    })
 
     it('is ready', async ()=>{
         var rows = await executeSync('select current_user')

@@ -18,6 +18,12 @@ services:
       dockerfile: ./support/Dockerfile
     image: node:tests
     container_name: tests
+    environment: 
+      - PGHOST=postgres
+      - PGPORT=5432
+      - PGDATABASE=data
+      - PGUSER=dev
+      - PGPASSWORD=dev
     command: ./support/run-tests.sh
 
   dev:
